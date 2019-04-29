@@ -1,3 +1,316 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+:root{
+	font-size: 16px;
+}
+
+.site{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding:2rem;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 0;
+	width: 100%;
+
+}
+
+nav{
+	max-width:100%;
+	width: 50rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	
+}
+
+a{
+	text-decoration: none;
+	color: grey;
+}
+
+.section1{
+	display: flex;
+	flex-basis: row;
+	max-width:100%;
+	padding: 0;
+}
+
+.div1{
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	max-width:auto;
+}
+
+.p1{
+	font-size: 5rem;
+	font-style: italic;
+}
+
+button{
+	padding: 0.5rem 2rem;
+	margin: 0.8rem 0;
+}
+
+#img1{
+	padding:1rem;
+}
+
+.section-2{
+	max-width:100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 0.1rem solid black;
+	border-left: none;
+	border-right: none;
+}
+
+.middle-img{
+	height:auto;
+	max-width: 100%;
+}
+
+.middle-img img{
+	height:auto;
+	width: 100%
+}
+
+.div2{
+	max-width:auto;
+	display: flex;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.div3{
+	max-width:auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#features{
+	padding-right: 0.8rem;
+}
+
+.div4{
+	max-width:auto;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	display: flex;
+	flex-direction: column;	
+}
+
+.section3{
+	align-self: flex-end;
+	width: 100%
+}
+
+#num1{
+	padding: 1rem 0;	
+}
+
+.section-end{
+	display: flex;
+	flex-direction: row;
+	justify-content:flex-start;
+	max-width:auto;
+	margin-bottom: 3rem;	
+}
+
+@media(max-width:800px){
+	:root{
+		font-size: 16px;
+	}
+	.site{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	header{
+		padding: 0 0 2rem 0;
+		display: flex;
+		flex-direction: column-reverse;
+		align-self: stretch;
+		align-items: center;
+	}
+
+	nav{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.logo{
+		padding: 2rem;
+	}
+
+	#img1{
+		display: none;
+	}
+
+	.section-2{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border: 0.1rem solid black;
+		border-left: none;
+		border-right: none;
+	}
+	.section-2 img{
+		height:auto;
+		max-width: 100%;
+	}
+	
+	.div2{
+	max-width:100vw;
+	display: flex;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	}
+
+	.div3{
+	max-width:100vw;
+	display: flex;
+	flex-direction: column;
+	}
+}
+@media(max-width:500px){
+	:root{
+		font-size:24;
+	}
+	.site{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	header{
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 0;
+		margin-bottom: 1rem;
+		border-bottom: grey 0.1rem solid;
+	}
+
+	.nav1{
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.nav1 a{
+		text-align: center;
+		padding: 1rem 0rem;
+		border-top: grey solid 0.1rem;
+	}
+
+	.section-2{
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.section1{
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.div1{
+		max-width: 100%;
+		padding: 1rem 0;
+	}
+
+	.div1 p{
+		font-size: 3rem;
+	}
+
+	.div2{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.div3{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.div3 p{
+		padding-bottom: 2rem;
+	}
+
+}
